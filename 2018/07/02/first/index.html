@@ -8,17 +8,25 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>初认识 | MUMU&#39;blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#汇编语言初探 ##C语言转换为汇编语言在vs中编辑好代码之后，可以先按F10进行编译处理之后，在空白处右键，转到反汇编，或者直接按Alt+8进行反汇编，这时从C语言转为汇编语言就完成。 ##数值显示">
+  <meta name="description" content="#汇编语言初探 ##C语言转换为汇编语言 在vs中编辑好代码之后，可以先按F10进行编译处理之后，在空白处右键，转到反汇编，或者直接按Alt+8进行反汇编，这时从C语言转为汇编语言就完成。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="初认识">
 <meta property="og:url" content="http://yoursite.com/2018/07/02/first/index.html">
 <meta property="og:site_name" content="MUMU&#39;blog">
-<meta property="og:description" content="#汇编语言初探 ##C语言转换为汇编语言在vs中编辑好代码之后，可以先按F10进行编译处理之后，在空白处右键，转到反汇编，或者直接按Alt+8进行反汇编，这时从C语言转为汇编语言就完成。 ##数值显示">
+<meta property="og:description" content="#汇编语言初探 ##C语言转换为汇编语言 在vs中编辑好代码之后，可以先按F10进行编译处理之后，在空白处右键，转到反汇编，或者直接按Alt+8进行反汇编，这时从C语言转为汇编语言就完成。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-02T06:46:28.745Z">
+<meta property="og:image" content="https://i.imgur.com/FQtbeuv.png">
+<meta property="og:image" content="https://i.imgur.com/WiWBENq.png">
+<meta property="og:image" content="https://i.imgur.com/QtDudJH.png">
+<meta property="og:image" content="https://i.imgur.com/tLytcFM.png">
+<meta property="og:image" content="https://i.imgur.com/KDhA9kT.png">
+<meta property="og:image" content="https://i.imgur.com/t8Sumha.png">
+<meta property="og:image" content="https://i.imgur.com/Yi0qrsj.png">
+<meta property="og:updated_time" content="2018-07-02T12:43:22.249Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="初认识">
-<meta name="twitter:description" content="#汇编语言初探 ##C语言转换为汇编语言在vs中编辑好代码之后，可以先按F10进行编译处理之后，在空白处右键，转到反汇编，或者直接按Alt+8进行反汇编，这时从C语言转为汇编语言就完成。 ##数值显示">
+<meta name="twitter:description" content="#汇编语言初探 ##C语言转换为汇编语言 在vs中编辑好代码之后，可以先按F10进行编译处理之后，在空白处右键，转到反汇编，或者直接按Alt+8进行反汇编，这时从C语言转为汇编语言就完成。">
+<meta name="twitter:image" content="https://i.imgur.com/FQtbeuv.png">
   
     <link rel="alternative" href="/atom.xml" title="MUMU&#39;blog" type="application/atom+xml">
   
@@ -175,8 +183,22 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>#汇编语言初探</p>
-<p>##C语言转换为汇编语言<br>在vs中编辑好代码之后，可以先按F10进行编译处理之后，在空白处右键，转到反汇编，或者直接按Alt+8进行反汇编，这时从C语言转为汇编语言就完成。</p>
+<p>##C语言转换为汇编语言</p>
+<p><font size="4"><br>在vs中编辑好代码之后，可以先按F10进行编译处理之后，在空白处右键，转到反汇编，或者直接按Alt+8进行反汇编，这时从C语言转为汇编语言就完成。<br><img src="https://i.imgur.com/FQtbeuv.png" alt=""><br><img src="https://i.imgur.com/WiWBENq.png" alt=""><br><a id="more"></a></font></p>
 <p>##数值显示</p>
+<p>###原码<br>   原码是一种二进制表示方法。<br>   原码表示法在数值前面增加了一位符号位（即最高位为符号位）：正数该位为0，负数该位为1（0两种表示方法都可以），其余位表示数值的大小。  </p>
+<p>###补码<br>   一个负整数（或原码）与其补数（或补码）相加，和为模。<br>   对一个整数的补码再求补码，等于该整数自身。<br>   补码的正零与负零表示方法相同。    </p>
+<p>###反码<br>   正数的反码与其原码相同；<br>   负数的反码是对其原码逐位取反，但符号位除外。<br><img src="https://i.imgur.com/QtDudJH.png" alt=""></p>
+<p>##寄存器<br><img src="https://i.imgur.com/tLytcFM.png" alt=""></p>
+<p>###标志寄存器<br>CF表示进位或借位，针对无符号整数，判断是否超出表达范围。<br>OF表示溢出，针对有符号整数，溢出符号就反啦，其实有符号与无符号一个区别就是最高位是符号还是数值，当是数值时，最高位的高位发生变化就是CF，而是符号时，最高位收到数值运算影响就是OF，计算机并不知道是否有符号，逻辑有程序员决定。<br>ZF，SF，PF分别表示上次运算结果为0，最高位为1，为1的位数为偶数个。  </p>
+<p>###寻址方式</p>
+<p>| ————- |:————-:|<br>| 立即数寻址     | MOV EAX,123H   |<br>| 寄存器寻址     | MOV EAX,EBX |<br>| 直接寻址       | MOV EAX, [12345678H] |<br>| 寄存器间接寻址  | MOV EAX, [EBX]      |<br>| 乱七八糟寻址    | MOV EAX,123[BX][SI]  |</p>
+<p>###基本指令<br>| ————- |:————-:|<br>| 数据传送       | MOV, PUSH,POP,LEA,MOVSX,PUSHAD,POPAD   |<br>| 算数运算       | ADD,INC,SUB, DEC,NEG,CMP,MUL,IMUL,DIV,IDIV |<br>| 逻辑运算       |AND,OR,NOT,XOR,TEST,SHL,SAL,SHR,SAR,ROL,ROR,RCL,RCR|<br>| 转移指令       | JMP, J[N]Z(E), J[N]B,JA,JL, JG      |<br>| 循环指令       | LOOP, JCXZ   |<br>| 串操作         |MOVS[BWD],CMPS,SCAS,LODS,STOS,REP    |<br>| 其他指令       |INT,RET,NOP,CLD,CALL    |</p>
+<p>##虚拟机下的程序调试</p>
+<p>###吾爱破解的布局<br><img src="https://i.imgur.com/KDhA9kT.png" alt=""> </p>
+<p>###其他窗口<br>| ————- |:————-:|<br>|L(og)     | 日志信息      |<br>| E(xecute modules)      | 模块信息  |<br>| M(emory map)      |内存映射信息   |<br>| T(hreads)      | 线程信息     |<br>| W(indows)      | 窗口信息    |<br>| H(andles)        |句柄信息    |<br>| C     |当前线程上下文   |<br>| K     |调用链信息    |</p>
+<p>###常用快捷键<br><img src="https://i.imgur.com/t8Sumha.png" alt=""><br><img src="https://i.imgur.com/Yi0qrsj.png" alt=""></p>
+<p>###基本调试流程<br>演示<br>GOTO<br>Breakpoint<br>Comment<br>Lable<br><br> </p>
 
       
 
